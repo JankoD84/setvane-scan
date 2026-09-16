@@ -1,0 +1,15 @@
+name: Setvane governance validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  governance:
+    uses: JankoD84/setvane-ecosystem-governance/.github/workflows/product-governance.yml@4218a374acf2845b6a2ca89e46d0b11c9266bdee

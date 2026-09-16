@@ -1,0 +1,94 @@
+{
+  "authority": {
+    "authorized": [
+      "OBSERVE",
+      "INSPECT",
+      "ANALYZE",
+      "REPORT"
+    ],
+    "forbidden": [
+      "APPLY",
+      "EXECUTE",
+      "WRITE",
+      "DELETE",
+      "INSTALL",
+      "RESTART",
+      "REMEDIATE"
+    ]
+  },
+  "canonical_repository": "JankoD84/setvane-ecosystem-governance",
+  "canonical_revision": "4218a374acf2845b6a2ca89e46d0b11c9266bdee",
+  "disclosure": {
+    "public_mode": true,
+    "secrets_allowed": false
+  },
+  "entrypoint": "AGENTS.md",
+  "governance_version": "v1",
+  "product": "setvane",
+  "profile": "scan",
+  "projection": {
+    "files": {
+      ".agents/skills/README.md": "2b970891ca7495f40403075ffccb1634f57c460dc769aac886c5ea323a2457ac",
+      ".ai/process/implementation.md": "b66246957211f36d4e54e974b8e0bda1e4d31cd8006c15ffa1ef7bb680bdde13",
+      ".ai/process/review.md": "ea818f7e36c4962a654af80333fbc3a64ebc872dadf007c1022fe92adf3a6ddb",
+      ".ai/repo/authority.md": "747bf533631389cc558971306d3c9428998f1774c787e72d2bad27816fde9007",
+      ".ai/repo/development.md": "810d4bb8049e7bc719b982c13ff42fd8922097c4a7904b6fa9ae52b709245394",
+      ".ai/repo/identity.md": "32ecaf133175dfec852f7098f664408b1d1f27b9d45217abf1e006ace1bae261",
+      ".ai/repo/security.md": "b7f25d848b6a073b677e95366c380d7d218bcb209fd09b90e04a4df2404e4f9c",
+      ".github/workflows/governance-validation.yml": "56c4e67f14d22ec878a1d6fb75084c431adbe5239a07e363adf47eb877e5f300",
+      ".governance/validate.py": "dfd0f481750ce55159b3a4f084a9846579467df379cdb73a44af1dc3a56eb988",
+      "AGENTS.md": "b3470aa2e744b8370b4ae645ea37f7ea1ea976996378886209755e34b3c271f6"
+    },
+    "governed_workflows": [
+      "governance-validation.yml"
+    ],
+    "inventory_roots": [
+      ".ai",
+      ".agents/skills",
+      ".governance",
+      ".github/workflows"
+    ],
+    "required_markers": {
+      "authority": [
+        "SCAN = OBSERVE + INSPECT + ANALYZE + REPORT",
+        "FINDING != REMEDIATION AUTHORITY",
+        "READ-ONLY"
+      ],
+      "disclosure": [
+        "This repository is **public**"
+      ],
+      "git_safety": [
+        "Protected operations",
+        "SAFE_TO_EDIT=NO"
+      ],
+      "identity": [
+        "| Repository | setvane-scan |",
+        "| Profile | scan |",
+        "canonical_governance_version: v1"
+      ],
+      "process": [
+        "MODE=REVIEW",
+        "MODE=IMPLEMENTATION",
+        "EXPECTED_WORKTREE",
+        "TASK_ID"
+      ],
+      "skills": [
+        "Skills define workflows within established authority. Skills do NOT grant permission."
+      ]
+    },
+    "required_references": [
+      "setvane-ecosystem-governance/.ai/governance/invariants.md",
+      "setvane-ecosystem-governance/.ai/governance/authority-model.md",
+      "setvane-ecosystem-governance/.ai/governance/git-safety.md",
+      "setvane-ecosystem-governance/.ai/governance/authorization.md",
+      "setvane-ecosystem-governance/.ai/governance/public-repository-safety.md",
+      "setvane-ecosystem-governance/profiles/scan.md",
+      "setvane-ecosystem-governance/contracts/evidence-contract.md"
+    ]
+  },
+  "public_mode": true,
+  "repository": "setvane-scan",
+  "repository_slug": "JankoD84/setvane-scan",
+  "schema_version": "1.1",
+  "visibility": "public"
+}
